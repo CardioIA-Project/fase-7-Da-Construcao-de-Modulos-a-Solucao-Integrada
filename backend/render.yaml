@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: cardioia-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python treinar_modelo.py
+    startCommand: gunicorn run:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 60
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEVICE_API_KEY
+        generateValue: true
+      - key: MEDICO_SENHA
+        sync: false
+      - key: PACIENTE_SENHA
+        sync: false
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: SEED_DEMO
+        value: "true"
