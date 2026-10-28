@@ -35,7 +35,7 @@ def main(config: dict | None = None) -> int:
     except Exception as erro:
         return _falha("criar sessão", erro)
     print("OK  sessão criada")
-    for texto in ("oi", "Tontura", "Leve", "Horas", "nenhum", "Dor no peito"):
+    for texto in ("Tontura", "Leve", "Horas", "nenhum", "Dor no peito"):
         try:
             resposta = cliente.enviar(sessao, texto)
         except Exception as erro:

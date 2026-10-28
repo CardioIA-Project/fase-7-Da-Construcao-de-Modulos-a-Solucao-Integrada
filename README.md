@@ -49,7 +49,7 @@ backend/
 │       ├── triagem.py           Triagem local (máquina de estados do fluxo da Fase 5)
 │       ├── triagem_hibrida.py   Watson como principal, triagem local como reserva
 │       └── watson.py            Cliente HTTP do Watson Assistant
-├── tests/                       123 testes (pytest)
+├── tests/                       128 testes (pytest)
 ├── treinar_modelo.py            Gera o modelo_risco_cardiaco.pkl
 ├── testar_watson.py             Diagnóstico das credenciais do Watson
 ├── run.py                       Ponto de entrada
@@ -160,7 +160,7 @@ No plano gratuito o serviço hiberna sem uso e o disco é efêmero, então o SQL
 
 ## Testes e robustez
 
-`pytest` roda 123 testes: fluxo sensor → risco → histórico, permissões por perfil, validação de entradas (corpos que não são objeto JSON, `NaN` e infinito, valores fora da faixa, `paciente_id` inválido, corpo gigante), token adulterado e expirado, CORS, erros inesperados em JSON, a triagem com frases de emergência variadas e a integração com o Watson (cliente HTTP real contra um servidor simulado, falhas, timeout e reserva local). Toda falha encontrada em auditoria virou teste de regressão.
+`pytest` roda 128 testes: fluxo sensor → risco → histórico, permissões por perfil, validação de entradas (corpos que não são objeto JSON, `NaN` e infinito, valores fora da faixa, `paciente_id` inválido, corpo gigante), token adulterado e expirado, CORS, erros inesperados em JSON, a triagem com frases de emergência variadas e a integração com o Watson (cliente HTTP real contra um servidor simulado, falhas, timeout e reserva local). Toda falha encontrada em auditoria virou teste de regressão.
 
 Verificado em instalação limpa (Python 3.12, só `requirements.txt`): build com treino do modelo em cerca de 3 s, servidor saudável em 1 a 3 s, 120 leituras e 40 conversas concorrentes sem erro, e dados preservados após reiniciar.
 
@@ -168,6 +168,6 @@ Verificado em instalação limpa (Python 3.12, só `requirements.txt`): build co
 
 - A triagem local reconhece sintomas por palavras e padrões, sem NLP. Frases fora do vocabulário (por exemplo "quase desmaiei") caem no menu de opções em vez de acionar a emergência.
 - Negações não são interpretadas: "não tenho dor no peito" aciona a emergência. É uma escolha deliberada pelo lado seguro.
-- A integração com o Watson foi testada com um servidor simulado, não com uma instância real. O `testar_watson.py` serve para confirmar com as credenciais de verdade.
+- A integração com o Watson foi validada com uma instância real (endpoint antigo, sem `WATSON_ENVIRONMENT_ID`) e, nos testes automáticos, com um servidor simulado. Uma primeira mensagem que o Watson não reconhece (por exemplo "oi") é respondida com a boas-vindas e o menu da triagem local, e o texto do Watson passa por uma limpeza de pontuação (aspa solta, espaço antes de vírgula, vírgula sem espaço).
 - As sessões do chat ficam em memória (limite de 2000, expiram em 1 hora) e se perdem ao reiniciar o servidor.
 - O modelo reproduz uma regra sintética do treino. O resultado é um protótipo acadêmico, sem valor clínico.

@@ -215,3 +215,51 @@ def test_cliente_watson_invalido_nao_derruba_o_app(tmp_path, caminho_modelo, mon
     sessao = c.post("/api/session").get_json()["session_id"]
     resposta = c.post("/api/message", json={"session_id": sessao, "text": "oi"}).get_json()
     assert resposta["origem"] == "local"
+
+
+def test_oi_inicial_nao_entendido_pelo_watson_mostra_menu_local(c, watson):
+    watson.respostas = [{"replies": ["Acho que não entendi. Reformule sua pergunta."], "options": []}]
+    sessao = _abrir(c)
+    corpo = _msg(c, sessao, "oi")
+    assert corpo["origem"] == "local"
+    assert corpo["replies"][0].startswith("Bem-vindo")
+    assert "Tontura" in corpo["options"]
+    seguinte = _msg(c, sessao, "Tontura")
+    assert seguinte["origem"] == "watson"
+
+
+def test_mensagem_vazia_abre_com_menu_local_sem_chamar_o_watson(c, watson):
+    sessao = _abrir(c)
+    corpo = _msg(c, sessao, "   ")
+    assert corpo["origem"] == "local"
+    assert corpo["options"]
+    assert watson.mensagens == []
+
+
+def test_nao_entendi_do_watson_no_meio_do_fluxo_mostra_opcoes_locais(c, watson):
+    sessao = _abrir(c)
+    _msg(c, sessao, "Tontura")
+    watson.respostas = [{"replies": ["Acho que não entendi."], "options": []}]
+    corpo = _msg(c, sessao, "talvez")
+    assert corpo["origem"] == "local"
+    assert corpo["options"] == ["Leve", "Moderada", "Intensa"]
+
+
+def test_limpar_texto_corrige_o_resumo_real_do_watson():
+    bruto = (
+        '"Resumindo o que você me contou: você relatou o sintoma Tontura , '
+        "classificado como Leve,há Horas. Isso não é um diagnóstico."
+    )
+    resposta = extrair_resposta({"output": {"generic": [{"response_type": "text", "text": bruto}]}})
+    assert resposta["replies"] == [
+        "Resumindo o que você me contou: você relatou o sintoma Tontura, "
+        "classificado como Leve, há Horas. Isso não é um diagnóstico."
+    ]
+
+
+def test_limpar_texto_preserva_aspas_balanceadas_e_decimais():
+    from app.services.watson import limpar_texto
+
+    assert limpar_texto('Responda "nenhum", ou 1,5 vezes') == 'Responda "nenhum", ou 1,5 vezes'
+    assert limpar_texto('"Oi"') == '"Oi"'
+    assert limpar_texto("Texto normal.") == "Texto normal."

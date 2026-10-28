@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import threading
 import time
 
@@ -8,17 +9,29 @@ import requests
 IAM_PADRAO = "https://iam.cloud.ibm.com/identity/token"
 
 
+def limpar_texto(texto: str) -> str:
+    texto = texto.strip()
+    if texto.startswith('"') and texto.count('"') % 2 == 1:
+        texto = texto[1:].lstrip()
+    if texto.endswith('"') and texto.count('"') % 2 == 1:
+        texto = texto[:-1].rstrip()
+    texto = re.sub(r"[ \t]+([,.;:!?])", r"\1", texto)
+    texto = re.sub(r",(?=[A-Za-zÀ-ÿ])", ", ", texto)
+    texto = re.sub(r"[ \t]{2,}", " ", texto)
+    return texto
+
+
 def extrair_resposta(resposta: dict) -> dict:
     textos: list[str] = []
     opcoes: list[str] = []
     for item in resposta.get("output", {}).get("generic", []):
         tipo = item.get("response_type")
         if tipo == "text":
-            texto = (item.get("text") or "").strip()
+            texto = limpar_texto(item.get("text") or "")
             if texto:
                 textos.append(texto)
         elif tipo == "option":
-            titulo = (item.get("title") or "").strip()
+            titulo = limpar_texto(item.get("title") or "")
             if titulo:
                 textos.append(titulo)
             for opcao in item.get("options", []):

@@ -13,6 +13,7 @@ PAUSA_CIRCUITO_S = 60
 
 MARCA_RESUMO = "Resumindo o que você me contou"
 MARCA_EMERGENCIA = "SAMU (192)"
+MARCA_NAO_ENTENDI = "não entendi"
 
 
 class TriagemHibrida:
@@ -77,7 +78,7 @@ class TriagemHibrida:
         if local["emergencia"]:
             return resposta_local
         sessao_watson = self._sessoes_watson.get(sessao_id)
-        if sessao_watson is None or not self.watson_ativo:
+        if sessao_watson is None or not self.watson_ativo or not texto.strip():
             return resposta_local
         try:
             watson = self._watson.enviar(sessao_watson, texto)
@@ -88,6 +89,8 @@ class TriagemHibrida:
             return resposta_local
         self._registrar_sucesso()
         junto = " ".join(watson["replies"])
+        if MARCA_NAO_ENTENDI in junto.lower() and local["options"]:
+            return resposta_local
         emergencia = MARCA_EMERGENCIA in junto
         finalizado = emergencia or MARCA_RESUMO in junto or local["finalizado"]
         return {
