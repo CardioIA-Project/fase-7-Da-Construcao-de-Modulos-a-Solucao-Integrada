@@ -1,0 +1,314 @@
+{
+    "version": 1,
+    "author": "CardioIA",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-esp32-devkit-c-v4",
+            "id": "esp",
+            "top": 0,
+            "left": 0,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-dht22",
+            "id": "dht1",
+            "top": -105.3,
+            "left": 148.2,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot_fc",
+            "top": 135.5,
+            "left": 249.4,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot_spo2",
+            "top": 231.5,
+            "left": 249.4,
+            "attrs": {}
+        },
+        {
+            "type": "board-ssd1306",
+            "id": "oled1",
+            "top": -150.5,
+            "left": -86.6,
+            "attrs": {
+                "i2cAddress": "0x3c"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led_verde",
+            "top": 150,
+            "left": -130,
+            "attrs": {
+                "color": "green"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led_amarelo",
+            "top": 150,
+            "left": -92,
+            "attrs": {
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led_vermelho",
+            "top": 150,
+            "left": -54,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": 224,
+            "left": -134.4,
+            "attrs": {
+                "value": "220"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r2",
+            "top": 224,
+            "left": -96.4,
+            "attrs": {
+                "value": "220"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r3",
+            "top": 224,
+            "left": -58.4,
+            "attrs": {
+                "value": "220"
+            }
+        },
+        {
+            "type": "wokwi-buzzer",
+            "id": "bz1",
+            "top": 40,
+            "left": -190,
+            "attrs": {
+                "volume": "0.1"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "esp:TX",
+            "$serialMonitor:RX",
+            "",
+            []
+        ],
+        [
+            "esp:RX",
+            "$serialMonitor:TX",
+            "",
+            []
+        ],
+        [
+            "dht1:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "dht1:GND",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "dht1:SDA",
+            "esp:15",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot_fc:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot_fc:GND",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot_fc:SIG",
+            "esp:34",
+            "orange",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot_spo2:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot_spo2:GND",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot_spo2:SIG",
+            "esp:35",
+            "blue",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "oled1:GND",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "oled1:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "oled1:SDA",
+            "esp:21",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "oled1:SCL",
+            "esp:22",
+            "yellow",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "led_verde:A",
+            "esp:25",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "led_verde:C",
+            "r1:1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r1:2",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "led_amarelo:A",
+            "esp:26",
+            "yellow",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "led_amarelo:C",
+            "r2:1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r2:2",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "led_vermelho:A",
+            "esp:27",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "led_vermelho:C",
+            "r3:1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r3:2",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "bz1:1",
+            "esp:14",
+            "purple",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "bz1:2",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
