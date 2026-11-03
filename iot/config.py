@@ -1,7 +1,7 @@
 WIFI_SSID = "Wokwi-GUEST"
 WIFI_SENHA = ""
 
-API_URL = "https://SEU-BACKEND.onrender.com"
+API_URL = "https://fase-7-da-construcao-de-modulos-a.onrender.com"
 DEVICE_KEY = "cardioia-device-demo"
 PACIENTE_ID = "p001"
 DISPOSITIVO = "esp32-wokwi"
