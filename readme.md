@@ -66,7 +66,7 @@ flowchart LR
 | :--- | :---: | :--- |
 | Backend integrador em Python (modelo preditivo + conversacional) | ✅ | `backend/` |
 | Web em React + Vite publicada na Vercel, com `vercel.json` | ✅ | `web/` |
-| Mobile em Expo com build `.apk` (EAS) | ⏳ | `mobile/` |
+| Mobile em Expo com build `.apk` (EAS) | ✅ | `mobile/` |
 | Sensor em MicroPython no Wokwi com feedback (LED e OLED) | ✅ | `iot/` |
 | Diagrama de arquitetura | ✅ | seção "Visão geral" |
 | Relatório em PDF | ⏳ | _a anexar_ |
