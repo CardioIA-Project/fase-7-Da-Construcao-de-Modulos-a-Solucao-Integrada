@@ -23,7 +23,7 @@ Plataforma que integra **sensor (IoT)**, **modelo preditivo**, **triagem convers
 | 🔌 Sensor (Wokwi) | https://wokwi.com/projects/479615874964743169 |
 | 📱 App Android (.apk) | https://expo.dev/accounts/vitor_eiji/projects/mobile/builds/2c736c36-318b-46a9-919f-7010bd50f3dd |
 | 🎥 Vídeo de demonstração | https://youtu.be/ZMQOWeg5Zrc |
-| 📄 Relatório (PDF) | "docs\Relatorio_CardioIA_Fase7.pdf" |
+| 📄 Relatório (PDF) | [Relatório cardioIA](docs/Relatorio_CardioIA_Fase7.pdf) |
 
 > ⏱️ A API roda no plano gratuito do Render e **hiberna sem uso**. A primeira chamada pode levar cerca de 1 minuto. Abra `/health` na URL da API antes de testar; web e app avisam "acordando o servidor" e tentam de novo sozinhos.
 
@@ -69,9 +69,9 @@ flowchart LR
 | Mobile em Expo com build `.apk` (EAS) | ✅ | `mobile/` |
 | Sensor em MicroPython no Wokwi com feedback (LED e OLED) | ✅ | `iot/` |
 | Diagrama de arquitetura | ✅ | seção "Visão geral" |
-| Relatório em PDF | ⏳ | _a anexar_ |
-| Vídeo de até 5 minutos | ⏳ | _a anexar_ |
-| Ir Além | ⏳ | `IR_ALEM/` |
+| Relatório em PDF | ✅ | _a anexar_ |
+| Vídeo de até 5 minutos | ✅ | _a anexar_ |
+| Ir Além | ✅ | `IR_ALEM/` |
 
 ---
 
