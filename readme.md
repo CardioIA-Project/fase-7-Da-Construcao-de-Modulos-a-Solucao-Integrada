@@ -208,11 +208,11 @@ _Colocar aqui os prints (salvar em `docs/prints/` e referenciar):_
 
 | Painel do médico | Detalhe em risco ALTO | Triagem com emergência |
 | :---: | :---: | :---: |
-| `docs/prints/painel-medico.png` | `docs/prints/risco-alto.png` | `docs/prints/chat-emergencia.png` |
+| ![](docs/prints/painel-medico.png) | ![](docs/prints/risco-alto.png) | ![](docs/prints/chat-emergencia.png) |
 
 | Sensor no Wokwi (OLED em ALTO) | App Android |
 | :---: | :---: |
-| `docs/prints/wokwi-alto.png` | `docs/prints/app-android.png` |
+| ![](docs/prints/wokwi-alto.png) | ![](docs/prints/app-android.png) |
 
 ---
 
