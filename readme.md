@@ -22,8 +22,8 @@ Plataforma que integra **sensor (IoT)**, **modelo preditivo**, **triagem convers
 | ⚙️ API (Render) | https://fase-7-da-construcao-de-modulos-a.onrender.com |
 | 🔌 Sensor (Wokwi) | https://wokwi.com/projects/479615874964743169 |
 | 📱 App Android (.apk) | https://expo.dev/accounts/vitor_eiji/projects/mobile/builds/2c736c36-318b-46a9-919f-7010bd50f3dd |
-| 🎥 Vídeo de demonstração | _[colar aqui o link do vídeo]_ |
-| 📄 Relatório (PDF) | _[colar aqui o link ou o caminho do arquivo]_ |
+| 🎥 Vídeo de demonstração | https://youtu.be/ZMQOWeg5Zrc |
+| 📄 Relatório (PDF) | "docs\Relatorio_CardioIA_Fase7.pdf" |
 
 > ⏱️ A API roda no plano gratuito do Render e **hiberna sem uso**. A primeira chamada pode levar cerca de 1 minuto. Abra `/health` na URL da API antes de testar; web e app avisam "acordando o servidor" e tentam de novo sozinhos.
 
