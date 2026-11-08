@@ -120,7 +120,7 @@ cd backend
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements-dev.txt
-cp .env.example .env
+cp .env.example .env             # Windows: copy .env.example .env
 python treinar_modelo.py
 python run.py                    # http://localhost:5000
 pytest                           # 134 testes
