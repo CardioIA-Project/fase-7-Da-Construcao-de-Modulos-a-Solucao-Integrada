@@ -1,0 +1,9 @@
+case_id,trace_is_fit,missing_tokens,consumed_tokens,remaining_tokens
+IAM_001,False,1,12,1
+IAM_002,False,1,9,2
+IAM_003,False,1,12,1
+IAM_004,False,0,10,1
+IAM_005,False,1,12,1
+IAM_006,False,1,12,1
+IAM_007,False,1,12,1
+IAM_008,False,1,12,1

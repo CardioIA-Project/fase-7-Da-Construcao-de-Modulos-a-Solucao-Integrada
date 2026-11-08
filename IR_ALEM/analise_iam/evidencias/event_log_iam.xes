@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<string key="origin" value="csv" />
+	<trace>
+		<string key="concept:name" value="IAM_001" />
+		<event>
+			<string key="case_id" value="IAM_001" />
+			<string key="activity" value="Chegada" />
+			<date key="timestamp" value="2026-11-01T08:00:00+00:00" />
+			<string key="resource" value="Recepcao" />
+			<date key="next_timestamp" value="2026-11-01T08:08:00+00:00" />
+			<float key="time_to_next_minutes" value="8.0" />
+			<string key="concept:name" value="Chegada" />
+			<date key="time:timestamp" value="2026-11-01T08:00:00+00:00" />
+			<int key="@@index" value="0" />
+			<int key="@@case_index" value="0" />
+			<date key="start_timestamp" value="2026-11-01T08:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_001" />
+			<string key="activity" value="Triagem" />
+			<date key="timestamp" value="2026-11-01T08:08:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T08:18:00+00:00" />
+			<float key="time_to_next_minutes" value="10.0" />
+			<string key="concept:name" value="Triagem" />
+			<date key="time:timestamp" value="2026-11-01T08:08:00+00:00" />
+			<int key="@@index" value="1" />
+			<int key="@@case_index" value="0" />
+			<date key="start_timestamp" value="2026-11-01T08:08:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_001" />
+			<string key="activity" value="ECG" />
+			<date key="timestamp" value="2026-11-01T08:18:00+00:00" />
+			<string key="resource" value="Cardiologia" />
+			<date key="next_timestamp" value="2026-11-01T08:35:00+00:00" />
+			<float key="time_to_next_minutes" value="17.0" />
+			<string key="concept:name" value="ECG" />
+			<date key="time:timestamp" value="2026-11-01T08:18:00+00:00" />
+			<int key="@@index" value="2" />
+			<int key="@@case_index" value="0" />
+			<date key="start_timestamp" value="2026-11-01T08:18:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_001" />
+			<string key="activity" value="Troponina" />
+			<date key="timestamp" value="2026-11-01T08:35:00+00:00" />
+			<string key="resource" value="Laboratorio" />
+			<date key="next_timestamp" value="2026-11-01T09:00:00+00:00" />
+			<float key="time_to_next_minutes" value="25.0" />
+			<string key="concept:name" value="Troponina" />
+			<date key="time:timestamp" value="2026-11-01T08:35:00+00:00" />
+			<int key="@@index" value="3" />
+			<int key="@@case_index" value="0" />
+			<date key="start_timestamp" value="2026-11-01T08:35:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_001" />
+			<string key="activity" value="Diagnostico IAM" />
+			<date key="timestamp" value="2026-11-01T09:00:00+00:00" />
+			<string key="resource" value="Cardiologista" />
+			<date key="next_timestamp" value="2026-11-01T09:08:00+00:00" />
+			<float key="time_to_next_minutes" value="8.0" />
+			<string key="concept:name" value="Diagnostico IAM" />
+			<date key="time:timestamp" value="2026-11-01T09:00:00+00:00" />
+			<int key="@@index" value="4" />
+			<int key="@@case_index" value="0" />
+			<date key="start_timestamp" value="2026-11-01T09:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_001" />
+			<string key="activity" value="AAS" />
+			<date key="timestamp" value="2026-11-01T09:08:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T10:00:00+00:00" />
+			<float key="time_to_next_minutes" value="52.0" />
+			<string key="concept:name" value="AAS" />
+			<date key="time:timestamp" value="2026-11-01T09:08:00+00:00" />
+			<int key="@@index" value="5" />
+			<int key="@@case_index" value="0" />
+			<date key="start_timestamp" value="2026-11-01T09:08:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_001" />
+			<string key="activity" value="Reperfusao" />
+			<date key="timestamp" value="2026-11-01T10:00:00+00:00" />
+			<string key="resource" value="Hemodinamica" />
+			<date key="next_timestamp" value="2026-11-02T12:00:00+00:00" />
+			<float key="time_to_next_minutes" value="1560.0" />
+			<string key="concept:name" value="Reperfusao" />
+			<date key="time:timestamp" value="2026-11-01T10:00:00+00:00" />
+			<int key="@@index" value="6" />
+			<int key="@@case_index" value="0" />
+			<date key="start_timestamp" value="2026-11-01T10:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_001" />
+			<string key="activity" value="Alta" />
+			<date key="timestamp" value="2026-11-02T12:00:00+00:00" />
+			<string key="resource" value="Medico" />
+			<string key="next_timestamp" value="NaT" />
+			<float key="time_to_next_minutes" value="nan" />
+			<string key="concept:name" value="Alta" />
+			<date key="time:timestamp" value="2026-11-02T12:00:00+00:00" />
+			<int key="@@index" value="7" />
+			<int key="@@case_index" value="0" />
+			<date key="start_timestamp" value="2026-11-02T12:00:00+00:00" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="IAM_002" />
+		<event>
+			<string key="case_id" value="IAM_002" />
+			<string key="activity" value="Chegada" />
+			<date key="timestamp" value="2026-11-01T09:00:00+00:00" />
+			<string key="resource" value="Recepcao" />
+			<date key="next_timestamp" value="2026-11-01T09:06:00+00:00" />
+			<float key="time_to_next_minutes" value="6.0" />
+			<string key="concept:name" value="Chegada" />
+			<date key="time:timestamp" value="2026-11-01T09:00:00+00:00" />
+			<int key="@@index" value="8" />
+			<int key="@@case_index" value="1" />
+			<date key="start_timestamp" value="2026-11-01T09:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_002" />
+			<string key="activity" value="Triagem" />
+			<date key="timestamp" value="2026-11-01T09:06:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T09:20:00+00:00" />
+			<float key="time_to_next_minutes" value="14.0" />
+			<string key="concept:name" value="Triagem" />
+			<date key="time:timestamp" value="2026-11-01T09:06:00+00:00" />
+			<int key="@@index" value="9" />
+			<int key="@@case_index" value="1" />
+			<date key="start_timestamp" value="2026-11-01T09:06:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_002" />
+			<string key="activity" value="Troponina" />
+			<date key="timestamp" value="2026-11-01T09:20:00+00:00" />
+			<string key="resource" value="Laboratorio" />
+			<date key="next_timestamp" value="2026-11-01T10:10:00+00:00" />
+			<float key="time_to_next_minutes" value="50.0" />
+			<string key="concept:name" value="Troponina" />
+			<date key="time:timestamp" value="2026-11-01T09:20:00+00:00" />
+			<int key="@@index" value="10" />
+			<int key="@@case_index" value="1" />
+			<date key="start_timestamp" value="2026-11-01T09:20:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_002" />
+			<string key="activity" value="Diagnostico IAM" />
+			<date key="timestamp" value="2026-11-01T10:10:00+00:00" />
+			<string key="resource" value="Cardiologista" />
+			<date key="next_timestamp" value="2026-11-01T10:20:00+00:00" />
+			<float key="time_to_next_minutes" value="10.0" />
+			<string key="concept:name" value="Diagnostico IAM" />
+			<date key="time:timestamp" value="2026-11-01T10:10:00+00:00" />
+			<int key="@@index" value="11" />
+			<int key="@@case_index" value="1" />
+			<date key="start_timestamp" value="2026-11-01T10:10:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_002" />
+			<string key="activity" value="AAS" />
+			<date key="timestamp" value="2026-11-01T10:20:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-02T14:00:00+00:00" />
+			<float key="time_to_next_minutes" value="1660.0" />
+			<string key="concept:name" value="AAS" />
+			<date key="time:timestamp" value="2026-11-01T10:20:00+00:00" />
+			<int key="@@index" value="12" />
+			<int key="@@case_index" value="1" />
+			<date key="start_timestamp" value="2026-11-01T10:20:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_002" />
+			<string key="activity" value="Alta" />
+			<date key="timestamp" value="2026-11-02T14:00:00+00:00" />
+			<string key="resource" value="Medico" />
+			<string key="next_timestamp" value="NaT" />
+			<float key="time_to_next_minutes" value="nan" />
+			<string key="concept:name" value="Alta" />
+			<date key="time:timestamp" value="2026-11-02T14:00:00+00:00" />
+			<int key="@@index" value="13" />
+			<int key="@@case_index" value="1" />
+			<date key="start_timestamp" value="2026-11-02T14:00:00+00:00" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="IAM_003" />
+		<event>
+			<string key="case_id" value="IAM_003" />
+			<string key="activity" value="Chegada" />
+			<date key="timestamp" value="2026-11-01T10:00:00+00:00" />
+			<string key="resource" value="Recepcao" />
+			<date key="next_timestamp" value="2026-11-01T10:12:00+00:00" />
+			<float key="time_to_next_minutes" value="12.0" />
+			<string key="concept:name" value="Chegada" />
+			<date key="time:timestamp" value="2026-11-01T10:00:00+00:00" />
+			<int key="@@index" value="14" />
+			<int key="@@case_index" value="2" />
+			<date key="start_timestamp" value="2026-11-01T10:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_003" />
+			<string key="activity" value="Triagem" />
+			<date key="timestamp" value="2026-11-01T10:12:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T10:25:00+00:00" />
+			<float key="time_to_next_minutes" value="13.0" />
+			<string key="concept:name" value="Triagem" />
+			<date key="time:timestamp" value="2026-11-01T10:12:00+00:00" />
+			<int key="@@index" value="15" />
+			<int key="@@case_index" value="2" />
+			<date key="start_timestamp" value="2026-11-01T10:12:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_003" />
+			<string key="activity" value="ECG" />
+			<date key="timestamp" value="2026-11-01T10:25:00+00:00" />
+			<string key="resource" value="Cardiologia" />
+			<date key="next_timestamp" value="2026-11-01T10:40:00+00:00" />
+			<float key="time_to_next_minutes" value="15.0" />
+			<string key="concept:name" value="ECG" />
+			<date key="time:timestamp" value="2026-11-01T10:25:00+00:00" />
+			<int key="@@index" value="16" />
+			<int key="@@case_index" value="2" />
+			<date key="start_timestamp" value="2026-11-01T10:25:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_003" />
+			<string key="activity" value="Troponina" />
+			<date key="timestamp" value="2026-11-01T10:40:00+00:00" />
+			<string key="resource" value="Laboratorio" />
+			<date key="next_timestamp" value="2026-11-01T10:48:00+00:00" />
+			<float key="time_to_next_minutes" value="8.0" />
+			<string key="concept:name" value="Troponina" />
+			<date key="time:timestamp" value="2026-11-01T10:40:00+00:00" />
+			<int key="@@index" value="17" />
+			<int key="@@case_index" value="2" />
+			<date key="start_timestamp" value="2026-11-01T10:40:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_003" />
+			<string key="activity" value="AAS" />
+			<date key="timestamp" value="2026-11-01T10:48:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T11:30:00+00:00" />
+			<float key="time_to_next_minutes" value="42.0" />
+			<string key="concept:name" value="AAS" />
+			<date key="time:timestamp" value="2026-11-01T10:48:00+00:00" />
+			<int key="@@index" value="18" />
+			<int key="@@case_index" value="2" />
+			<date key="start_timestamp" value="2026-11-01T10:48:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_003" />
+			<string key="activity" value="Diagnostico IAM" />
+			<date key="timestamp" value="2026-11-01T11:30:00+00:00" />
+			<string key="resource" value="Cardiologista" />
+			<date key="next_timestamp" value="2026-11-01T13:15:00+00:00" />
+			<float key="time_to_next_minutes" value="105.0" />
+			<string key="concept:name" value="Diagnostico IAM" />
+			<date key="time:timestamp" value="2026-11-01T11:30:00+00:00" />
+			<int key="@@index" value="19" />
+			<int key="@@case_index" value="2" />
+			<date key="start_timestamp" value="2026-11-01T11:30:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_003" />
+			<string key="activity" value="Reperfusao" />
+			<date key="timestamp" value="2026-11-01T13:15:00+00:00" />
+			<string key="resource" value="Hemodinamica" />
+			<date key="next_timestamp" value="2026-11-02T16:00:00+00:00" />
+			<float key="time_to_next_minutes" value="1605.0" />
+			<string key="concept:name" value="Reperfusao" />
+			<date key="time:timestamp" value="2026-11-01T13:15:00+00:00" />
+			<int key="@@index" value="20" />
+			<int key="@@case_index" value="2" />
+			<date key="start_timestamp" value="2026-11-01T13:15:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_003" />
+			<string key="activity" value="Alta" />
+			<date key="timestamp" value="2026-11-02T16:00:00+00:00" />
+			<string key="resource" value="Medico" />
+			<string key="next_timestamp" value="NaT" />
+			<float key="time_to_next_minutes" value="nan" />
+			<string key="concept:name" value="Alta" />
+			<date key="time:timestamp" value="2026-11-02T16:00:00+00:00" />
+			<int key="@@index" value="21" />
+			<int key="@@case_index" value="2" />
+			<date key="start_timestamp" value="2026-11-02T16:00:00+00:00" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="IAM_004" />
+		<event>
+			<string key="case_id" value="IAM_004" />
+			<string key="activity" value="Chegada" />
+			<date key="timestamp" value="2026-11-01T11:00:00+00:00" />
+			<string key="resource" value="Recepcao" />
+			<date key="next_timestamp" value="2026-11-01T11:05:00+00:00" />
+			<float key="time_to_next_minutes" value="5.0" />
+			<string key="concept:name" value="Chegada" />
+			<date key="time:timestamp" value="2026-11-01T11:00:00+00:00" />
+			<int key="@@index" value="22" />
+			<int key="@@case_index" value="3" />
+			<date key="start_timestamp" value="2026-11-01T11:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_004" />
+			<string key="activity" value="Triagem" />
+			<date key="timestamp" value="2026-11-01T11:05:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T11:14:00+00:00" />
+			<float key="time_to_next_minutes" value="9.0" />
+			<string key="concept:name" value="Triagem" />
+			<date key="time:timestamp" value="2026-11-01T11:05:00+00:00" />
+			<int key="@@index" value="23" />
+			<int key="@@case_index" value="3" />
+			<date key="start_timestamp" value="2026-11-01T11:05:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_004" />
+			<string key="activity" value="ECG" />
+			<date key="timestamp" value="2026-11-01T11:14:00+00:00" />
+			<string key="resource" value="Cardiologia" />
+			<date key="next_timestamp" value="2026-11-01T11:32:00+00:00" />
+			<float key="time_to_next_minutes" value="18.0" />
+			<string key="concept:name" value="ECG" />
+			<date key="time:timestamp" value="2026-11-01T11:14:00+00:00" />
+			<int key="@@index" value="24" />
+			<int key="@@case_index" value="3" />
+			<date key="start_timestamp" value="2026-11-01T11:14:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_004" />
+			<string key="activity" value="Troponina" />
+			<date key="timestamp" value="2026-11-01T11:32:00+00:00" />
+			<string key="resource" value="Laboratorio" />
+			<date key="next_timestamp" value="2026-11-01T11:50:00+00:00" />
+			<float key="time_to_next_minutes" value="18.0" />
+			<string key="concept:name" value="Troponina" />
+			<date key="time:timestamp" value="2026-11-01T11:32:00+00:00" />
+			<int key="@@index" value="25" />
+			<int key="@@case_index" value="3" />
+			<date key="start_timestamp" value="2026-11-01T11:32:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_004" />
+			<string key="activity" value="Diagnostico IAM" />
+			<date key="timestamp" value="2026-11-01T11:50:00+00:00" />
+			<string key="resource" value="Cardiologista" />
+			<date key="next_timestamp" value="2026-11-01T11:58:00+00:00" />
+			<float key="time_to_next_minutes" value="8.0" />
+			<string key="concept:name" value="Diagnostico IAM" />
+			<date key="time:timestamp" value="2026-11-01T11:50:00+00:00" />
+			<int key="@@index" value="26" />
+			<int key="@@case_index" value="3" />
+			<date key="start_timestamp" value="2026-11-01T11:50:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_004" />
+			<string key="activity" value="AAS" />
+			<date key="timestamp" value="2026-11-01T11:58:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-02T09:00:00+00:00" />
+			<float key="time_to_next_minutes" value="1262.0" />
+			<string key="concept:name" value="AAS" />
+			<date key="time:timestamp" value="2026-11-01T11:58:00+00:00" />
+			<int key="@@index" value="27" />
+			<int key="@@case_index" value="3" />
+			<date key="start_timestamp" value="2026-11-01T11:58:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_004" />
+			<string key="activity" value="Alta" />
+			<date key="timestamp" value="2026-11-02T09:00:00+00:00" />
+			<string key="resource" value="Medico" />
+			<string key="next_timestamp" value="NaT" />
+			<float key="time_to_next_minutes" value="nan" />
+			<string key="concept:name" value="Alta" />
+			<date key="time:timestamp" value="2026-11-02T09:00:00+00:00" />
+			<int key="@@index" value="28" />
+			<int key="@@case_index" value="3" />
+			<date key="start_timestamp" value="2026-11-02T09:00:00+00:00" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="IAM_005" />
+		<event>
+			<string key="case_id" value="IAM_005" />
+			<string key="activity" value="Chegada" />
+			<date key="timestamp" value="2026-11-01T12:00:00+00:00" />
+			<string key="resource" value="Recepcao" />
+			<date key="next_timestamp" value="2026-11-01T12:10:00+00:00" />
+			<float key="time_to_next_minutes" value="10.0" />
+			<string key="concept:name" value="Chegada" />
+			<date key="time:timestamp" value="2026-11-01T12:00:00+00:00" />
+			<int key="@@index" value="29" />
+			<int key="@@case_index" value="4" />
+			<date key="start_timestamp" value="2026-11-01T12:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_005" />
+			<string key="activity" value="Triagem" />
+			<date key="timestamp" value="2026-11-01T12:10:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T12:22:00+00:00" />
+			<float key="time_to_next_minutes" value="12.0" />
+			<string key="concept:name" value="Triagem" />
+			<date key="time:timestamp" value="2026-11-01T12:10:00+00:00" />
+			<int key="@@index" value="30" />
+			<int key="@@case_index" value="4" />
+			<date key="start_timestamp" value="2026-11-01T12:10:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_005" />
+			<string key="activity" value="ECG" />
+			<date key="timestamp" value="2026-11-01T12:22:00+00:00" />
+			<string key="resource" value="Cardiologia" />
+			<date key="next_timestamp" value="2026-11-01T12:38:00+00:00" />
+			<float key="time_to_next_minutes" value="16.0" />
+			<string key="concept:name" value="ECG" />
+			<date key="time:timestamp" value="2026-11-01T12:22:00+00:00" />
+			<int key="@@index" value="31" />
+			<int key="@@case_index" value="4" />
+			<date key="start_timestamp" value="2026-11-01T12:22:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_005" />
+			<string key="activity" value="Troponina" />
+			<date key="timestamp" value="2026-11-01T12:38:00+00:00" />
+			<string key="resource" value="Laboratorio" />
+			<date key="next_timestamp" value="2026-11-01T13:00:00+00:00" />
+			<float key="time_to_next_minutes" value="22.0" />
+			<string key="concept:name" value="Troponina" />
+			<date key="time:timestamp" value="2026-11-01T12:38:00+00:00" />
+			<int key="@@index" value="32" />
+			<int key="@@case_index" value="4" />
+			<date key="start_timestamp" value="2026-11-01T12:38:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_005" />
+			<string key="activity" value="Diagnostico IAM" />
+			<date key="timestamp" value="2026-11-01T13:00:00+00:00" />
+			<string key="resource" value="Cardiologista" />
+			<date key="next_timestamp" value="2026-11-01T13:07:00+00:00" />
+			<float key="time_to_next_minutes" value="7.0" />
+			<string key="concept:name" value="Diagnostico IAM" />
+			<date key="time:timestamp" value="2026-11-01T13:00:00+00:00" />
+			<int key="@@index" value="33" />
+			<int key="@@case_index" value="4" />
+			<date key="start_timestamp" value="2026-11-01T13:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_005" />
+			<string key="activity" value="AAS" />
+			<date key="timestamp" value="2026-11-01T13:07:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T14:00:00+00:00" />
+			<float key="time_to_next_minutes" value="53.0" />
+			<string key="concept:name" value="AAS" />
+			<date key="time:timestamp" value="2026-11-01T13:07:00+00:00" />
+			<int key="@@index" value="34" />
+			<int key="@@case_index" value="4" />
+			<date key="start_timestamp" value="2026-11-01T13:07:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_005" />
+			<string key="activity" value="Reperfusao" />
+			<date key="timestamp" value="2026-11-01T14:00:00+00:00" />
+			<string key="resource" value="Hemodinamica" />
+			<date key="next_timestamp" value="2026-11-02T11:00:00+00:00" />
+			<float key="time_to_next_minutes" value="1260.0" />
+			<string key="concept:name" value="Reperfusao" />
+			<date key="time:timestamp" value="2026-11-01T14:00:00+00:00" />
+			<int key="@@index" value="35" />
+			<int key="@@case_index" value="4" />
+			<date key="start_timestamp" value="2026-11-01T14:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_005" />
+			<string key="activity" value="Alta" />
+			<date key="timestamp" value="2026-11-02T11:00:00+00:00" />
+			<string key="resource" value="Medico" />
+			<string key="next_timestamp" value="NaT" />
+			<float key="time_to_next_minutes" value="nan" />
+			<string key="concept:name" value="Alta" />
+			<date key="time:timestamp" value="2026-11-02T11:00:00+00:00" />
+			<int key="@@index" value="36" />
+			<int key="@@case_index" value="4" />
+			<date key="start_timestamp" value="2026-11-02T11:00:00+00:00" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="IAM_006" />
+		<event>
+			<string key="case_id" value="IAM_006" />
+			<string key="activity" value="Chegada" />
+			<date key="timestamp" value="2026-11-01T13:00:00+00:00" />
+			<string key="resource" value="Recepcao" />
+			<date key="next_timestamp" value="2026-11-01T13:07:00+00:00" />
+			<float key="time_to_next_minutes" value="7.0" />
+			<string key="concept:name" value="Chegada" />
+			<date key="time:timestamp" value="2026-11-01T13:00:00+00:00" />
+			<int key="@@index" value="37" />
+			<int key="@@case_index" value="5" />
+			<date key="start_timestamp" value="2026-11-01T13:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_006" />
+			<string key="activity" value="Triagem" />
+			<date key="timestamp" value="2026-11-01T13:07:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T13:18:00+00:00" />
+			<float key="time_to_next_minutes" value="11.0" />
+			<string key="concept:name" value="Triagem" />
+			<date key="time:timestamp" value="2026-11-01T13:07:00+00:00" />
+			<int key="@@index" value="38" />
+			<int key="@@case_index" value="5" />
+			<date key="start_timestamp" value="2026-11-01T13:07:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_006" />
+			<string key="activity" value="ECG" />
+			<date key="timestamp" value="2026-11-01T13:18:00+00:00" />
+			<string key="resource" value="Cardiologia" />
+			<date key="next_timestamp" value="2026-11-01T13:32:00+00:00" />
+			<float key="time_to_next_minutes" value="14.0" />
+			<string key="concept:name" value="ECG" />
+			<date key="time:timestamp" value="2026-11-01T13:18:00+00:00" />
+			<int key="@@index" value="39" />
+			<int key="@@case_index" value="5" />
+			<date key="start_timestamp" value="2026-11-01T13:18:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_006" />
+			<string key="activity" value="Troponina" />
+			<date key="timestamp" value="2026-11-01T13:32:00+00:00" />
+			<string key="resource" value="Laboratorio" />
+			<date key="next_timestamp" value="2026-11-01T14:00:00+00:00" />
+			<float key="time_to_next_minutes" value="28.0" />
+			<string key="concept:name" value="Troponina" />
+			<date key="time:timestamp" value="2026-11-01T13:32:00+00:00" />
+			<int key="@@index" value="40" />
+			<int key="@@case_index" value="5" />
+			<date key="start_timestamp" value="2026-11-01T13:32:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_006" />
+			<string key="activity" value="Diagnostico IAM" />
+			<date key="timestamp" value="2026-11-01T14:00:00+00:00" />
+			<string key="resource" value="Cardiologista" />
+			<date key="next_timestamp" value="2026-11-01T14:06:00+00:00" />
+			<float key="time_to_next_minutes" value="6.0" />
+			<string key="concept:name" value="Diagnostico IAM" />
+			<date key="time:timestamp" value="2026-11-01T14:00:00+00:00" />
+			<int key="@@index" value="41" />
+			<int key="@@case_index" value="5" />
+			<date key="start_timestamp" value="2026-11-01T14:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_006" />
+			<string key="activity" value="AAS" />
+			<date key="timestamp" value="2026-11-01T14:06:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T15:10:00+00:00" />
+			<float key="time_to_next_minutes" value="64.0" />
+			<string key="concept:name" value="AAS" />
+			<date key="time:timestamp" value="2026-11-01T14:06:00+00:00" />
+			<int key="@@index" value="42" />
+			<int key="@@case_index" value="5" />
+			<date key="start_timestamp" value="2026-11-01T14:06:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_006" />
+			<string key="activity" value="Reperfusao" />
+			<date key="timestamp" value="2026-11-01T15:10:00+00:00" />
+			<string key="resource" value="Hemodinamica" />
+			<date key="next_timestamp" value="2026-11-02T10:00:00+00:00" />
+			<float key="time_to_next_minutes" value="1130.0" />
+			<string key="concept:name" value="Reperfusao" />
+			<date key="time:timestamp" value="2026-11-01T15:10:00+00:00" />
+			<int key="@@index" value="43" />
+			<int key="@@case_index" value="5" />
+			<date key="start_timestamp" value="2026-11-01T15:10:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_006" />
+			<string key="activity" value="Alta" />
+			<date key="timestamp" value="2026-11-02T10:00:00+00:00" />
+			<string key="resource" value="Medico" />
+			<string key="next_timestamp" value="NaT" />
+			<float key="time_to_next_minutes" value="nan" />
+			<string key="concept:name" value="Alta" />
+			<date key="time:timestamp" value="2026-11-02T10:00:00+00:00" />
+			<int key="@@index" value="44" />
+			<int key="@@case_index" value="5" />
+			<date key="start_timestamp" value="2026-11-02T10:00:00+00:00" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="IAM_007" />
+		<event>
+			<string key="case_id" value="IAM_007" />
+			<string key="activity" value="Chegada" />
+			<date key="timestamp" value="2026-11-01T14:00:00+00:00" />
+			<string key="resource" value="Recepcao" />
+			<date key="next_timestamp" value="2026-11-01T14:09:00+00:00" />
+			<float key="time_to_next_minutes" value="9.0" />
+			<string key="concept:name" value="Chegada" />
+			<date key="time:timestamp" value="2026-11-01T14:00:00+00:00" />
+			<int key="@@index" value="45" />
+			<int key="@@case_index" value="6" />
+			<date key="start_timestamp" value="2026-11-01T14:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_007" />
+			<string key="activity" value="Triagem" />
+			<date key="timestamp" value="2026-11-01T14:09:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T14:20:00+00:00" />
+			<float key="time_to_next_minutes" value="11.0" />
+			<string key="concept:name" value="Triagem" />
+			<date key="time:timestamp" value="2026-11-01T14:09:00+00:00" />
+			<int key="@@index" value="46" />
+			<int key="@@case_index" value="6" />
+			<date key="start_timestamp" value="2026-11-01T14:09:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_007" />
+			<string key="activity" value="ECG" />
+			<date key="timestamp" value="2026-11-01T14:20:00+00:00" />
+			<string key="resource" value="Cardiologia" />
+			<date key="next_timestamp" value="2026-11-01T14:35:00+00:00" />
+			<float key="time_to_next_minutes" value="15.0" />
+			<string key="concept:name" value="ECG" />
+			<date key="time:timestamp" value="2026-11-01T14:20:00+00:00" />
+			<int key="@@index" value="47" />
+			<int key="@@case_index" value="6" />
+			<date key="start_timestamp" value="2026-11-01T14:20:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_007" />
+			<string key="activity" value="Troponina" />
+			<date key="timestamp" value="2026-11-01T14:35:00+00:00" />
+			<string key="resource" value="Laboratorio" />
+			<date key="next_timestamp" value="2026-11-01T15:00:00+00:00" />
+			<float key="time_to_next_minutes" value="25.0" />
+			<string key="concept:name" value="Troponina" />
+			<date key="time:timestamp" value="2026-11-01T14:35:00+00:00" />
+			<int key="@@index" value="48" />
+			<int key="@@case_index" value="6" />
+			<date key="start_timestamp" value="2026-11-01T14:35:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_007" />
+			<string key="activity" value="Diagnostico IAM" />
+			<date key="timestamp" value="2026-11-01T15:00:00+00:00" />
+			<string key="resource" value="Cardiologista" />
+			<date key="next_timestamp" value="2026-11-01T15:08:00+00:00" />
+			<float key="time_to_next_minutes" value="8.0" />
+			<string key="concept:name" value="Diagnostico IAM" />
+			<date key="time:timestamp" value="2026-11-01T15:00:00+00:00" />
+			<int key="@@index" value="49" />
+			<int key="@@case_index" value="6" />
+			<date key="start_timestamp" value="2026-11-01T15:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_007" />
+			<string key="activity" value="AAS" />
+			<date key="timestamp" value="2026-11-01T15:08:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T16:40:00+00:00" />
+			<float key="time_to_next_minutes" value="92.0" />
+			<string key="concept:name" value="AAS" />
+			<date key="time:timestamp" value="2026-11-01T15:08:00+00:00" />
+			<int key="@@index" value="50" />
+			<int key="@@case_index" value="6" />
+			<date key="start_timestamp" value="2026-11-01T15:08:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_007" />
+			<string key="activity" value="Reperfusao" />
+			<date key="timestamp" value="2026-11-01T16:40:00+00:00" />
+			<string key="resource" value="Hemodinamica" />
+			<date key="next_timestamp" value="2026-11-02T13:00:00+00:00" />
+			<float key="time_to_next_minutes" value="1220.0" />
+			<string key="concept:name" value="Reperfusao" />
+			<date key="time:timestamp" value="2026-11-01T16:40:00+00:00" />
+			<int key="@@index" value="51" />
+			<int key="@@case_index" value="6" />
+			<date key="start_timestamp" value="2026-11-01T16:40:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_007" />
+			<string key="activity" value="Alta" />
+			<date key="timestamp" value="2026-11-02T13:00:00+00:00" />
+			<string key="resource" value="Medico" />
+			<string key="next_timestamp" value="NaT" />
+			<float key="time_to_next_minutes" value="nan" />
+			<string key="concept:name" value="Alta" />
+			<date key="time:timestamp" value="2026-11-02T13:00:00+00:00" />
+			<int key="@@index" value="52" />
+			<int key="@@case_index" value="6" />
+			<date key="start_timestamp" value="2026-11-02T13:00:00+00:00" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="IAM_008" />
+		<event>
+			<string key="case_id" value="IAM_008" />
+			<string key="activity" value="Chegada" />
+			<date key="timestamp" value="2026-11-01T15:00:00+00:00" />
+			<string key="resource" value="Recepcao" />
+			<date key="next_timestamp" value="2026-11-01T15:08:00+00:00" />
+			<float key="time_to_next_minutes" value="8.0" />
+			<string key="concept:name" value="Chegada" />
+			<date key="time:timestamp" value="2026-11-01T15:00:00+00:00" />
+			<int key="@@index" value="53" />
+			<int key="@@case_index" value="7" />
+			<date key="start_timestamp" value="2026-11-01T15:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_008" />
+			<string key="activity" value="Triagem" />
+			<date key="timestamp" value="2026-11-01T15:08:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T15:20:00+00:00" />
+			<float key="time_to_next_minutes" value="12.0" />
+			<string key="concept:name" value="Triagem" />
+			<date key="time:timestamp" value="2026-11-01T15:08:00+00:00" />
+			<int key="@@index" value="54" />
+			<int key="@@case_index" value="7" />
+			<date key="start_timestamp" value="2026-11-01T15:08:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_008" />
+			<string key="activity" value="ECG" />
+			<date key="timestamp" value="2026-11-01T15:20:00+00:00" />
+			<string key="resource" value="Cardiologia" />
+			<date key="next_timestamp" value="2026-11-01T15:35:00+00:00" />
+			<float key="time_to_next_minutes" value="15.0" />
+			<string key="concept:name" value="ECG" />
+			<date key="time:timestamp" value="2026-11-01T15:20:00+00:00" />
+			<int key="@@index" value="55" />
+			<int key="@@case_index" value="7" />
+			<date key="start_timestamp" value="2026-11-01T15:20:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_008" />
+			<string key="activity" value="Troponina" />
+			<date key="timestamp" value="2026-11-01T15:35:00+00:00" />
+			<string key="resource" value="Laboratorio" />
+			<date key="next_timestamp" value="2026-11-01T16:00:00+00:00" />
+			<float key="time_to_next_minutes" value="25.0" />
+			<string key="concept:name" value="Troponina" />
+			<date key="time:timestamp" value="2026-11-01T15:35:00+00:00" />
+			<int key="@@index" value="56" />
+			<int key="@@case_index" value="7" />
+			<date key="start_timestamp" value="2026-11-01T15:35:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_008" />
+			<string key="activity" value="Diagnostico IAM" />
+			<date key="timestamp" value="2026-11-01T16:00:00+00:00" />
+			<string key="resource" value="Cardiologista" />
+			<date key="next_timestamp" value="2026-11-01T16:08:00+00:00" />
+			<float key="time_to_next_minutes" value="8.0" />
+			<string key="concept:name" value="Diagnostico IAM" />
+			<date key="time:timestamp" value="2026-11-01T16:00:00+00:00" />
+			<int key="@@index" value="57" />
+			<int key="@@case_index" value="7" />
+			<date key="start_timestamp" value="2026-11-01T16:00:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_008" />
+			<string key="activity" value="AAS" />
+			<date key="timestamp" value="2026-11-01T16:08:00+00:00" />
+			<string key="resource" value="Enfermagem" />
+			<date key="next_timestamp" value="2026-11-01T17:05:00+00:00" />
+			<float key="time_to_next_minutes" value="57.0" />
+			<string key="concept:name" value="AAS" />
+			<date key="time:timestamp" value="2026-11-01T16:08:00+00:00" />
+			<int key="@@index" value="58" />
+			<int key="@@case_index" value="7" />
+			<date key="start_timestamp" value="2026-11-01T16:08:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_008" />
+			<string key="activity" value="Reperfusao" />
+			<date key="timestamp" value="2026-11-01T17:05:00+00:00" />
+			<string key="resource" value="Hemodinamica" />
+			<date key="next_timestamp" value="2026-11-02T15:00:00+00:00" />
+			<float key="time_to_next_minutes" value="1315.0" />
+			<string key="concept:name" value="Reperfusao" />
+			<date key="time:timestamp" value="2026-11-01T17:05:00+00:00" />
+			<int key="@@index" value="59" />
+			<int key="@@case_index" value="7" />
+			<date key="start_timestamp" value="2026-11-01T17:05:00+00:00" />
+		</event>
+		<event>
+			<string key="case_id" value="IAM_008" />
+			<string key="activity" value="Alta" />
+			<date key="timestamp" value="2026-11-02T15:00:00+00:00" />
+			<string key="resource" value="Medico" />
+			<string key="next_timestamp" value="NaT" />
+			<float key="time_to_next_minutes" value="nan" />
+			<string key="concept:name" value="Alta" />
+			<date key="time:timestamp" value="2026-11-02T15:00:00+00:00" />
+			<int key="@@index" value="60" />
+			<int key="@@case_index" value="7" />
+			<date key="start_timestamp" value="2026-11-02T15:00:00+00:00" />
+		</event>
+	</trace>
+</log>

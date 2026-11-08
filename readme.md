@@ -193,6 +193,74 @@ Contrato completo, exemplos e erros em [`backend/GUIA_INTEGRACAO.md`](backend/GU
 
 ---
 
+## 🔎 Ir Além — descoberta do processo de atendimento IAM
+
+Este material implementa a atividade de descoberta de processos usando `pm4py`.
+O banco original do CardioIA registra leituras de sinais, não as atividades
+assistenciais de um atendimento de infarto. Por isso, o arquivo
+`dados/event_log_iam.csv` é um event log sintético e explícito de oito atendimentos de Infarto Agudo do
+Miocárdio (IAM), criado para fins acadêmicos, com variantes controladas (ECG ausente, ordem ECG/troponina invertida e ausência de reperfusão).
+
+
+O fluxo clínico esperado analisado é:
+
+```text
+Chegada → Triagem → ECG → Troponina → Diagnóstico IAM → AAS → Reperfusão → Alta
+```
+
+O estudo identifica:
+
+- variantes de processo, incluindo ausência de ECG, inversão de etapas e falta
+  de reperfusão;
+- tempo de ciclo entre a chegada e a alta;
+- tempo médio entre atividades para localização de gargalos;
+- conformidade de cada caso em relação ao protocolo esperado;
+- gráfico DFG (*Directly-Follows Graph*) de performance.
+
+
+### Executar a análise IAM
+
+No PowerShell, a partir de `IR_ALEM\analise_iam`:
+
+```powershell
+cd "IR_ALEM\analise_iam"
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python gerar_analise.py
+```
+
+O script cria:
+
+- `evidencias/variantes.txt`
+- `evidencias/event_log_iam_enriched.csv`
+- `evidencias/event_log_iam.xes`
+- `evidencias/resumo_por_caso.csv`
+- `evidencias/tempos_por_atividade.csv`
+- `evidencias/tempos_entre_atividades.csv`
+- `evidencias/conformidade.csv`
+- `evidencias/token_replay.csv`
+- `evidencias/alignments.csv`
+- `evidencias/fitness.csv`
+- `evidencias/performance_dfg.png`
+- `evidencias/performance_heuristic_net.png` (quando suportado pela versão)
+- `relatorio_tecnico.pdf`
+- `relatorio_tecnico.docx`
+
+
+Para abrir o notebook:
+
+```powershell
+jupyter notebook notebooks\analise_iam.ipynb
+```
+
+O relatório técnico está em:
+```\docs\relatorio_tecnico_ir_alem.pdf```
+
+```
+
+---
+
 ## ⚠️ Limitações
 
 - Dados sintéticos e modelo sem valor clínico.

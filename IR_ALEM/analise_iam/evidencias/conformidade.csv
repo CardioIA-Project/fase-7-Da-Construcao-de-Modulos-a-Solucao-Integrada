@@ -1,0 +1,9 @@
+case_id,conforme,problemas
+IAM_001,True,Nenhum
+IAM_002,False,ECG ausente; Reperfusao ausente
+IAM_003,False,ordem invertida: Diagnostico IAM antes de AAS
+IAM_004,False,Reperfusao ausente
+IAM_005,True,Nenhum
+IAM_006,True,Nenhum
+IAM_007,True,Nenhum
+IAM_008,True,Nenhum

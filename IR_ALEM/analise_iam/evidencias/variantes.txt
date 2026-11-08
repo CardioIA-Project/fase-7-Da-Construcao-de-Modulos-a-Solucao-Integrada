@@ -1,0 +1,4 @@
+V1 | casos=5 | Chegada > Triagem > ECG > Troponina > Diagnostico IAM > AAS > Reperfusao > Alta
+V2 | casos=1 | Chegada > Triagem > Troponina > Diagnostico IAM > AAS > Alta
+V3 | casos=1 | Chegada > Triagem > ECG > Troponina > AAS > Diagnostico IAM > Reperfusao > Alta
+V4 | casos=1 | Chegada > Triagem > ECG > Troponina > Diagnostico IAM > AAS > Alta

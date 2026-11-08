@@ -1,0 +1,8 @@
+activity,avg_time_to_next_minutes,median_time_to_next_minutes,max_time_to_next_minutes,occurrences
+Reperfusao,1348.3333333333333,1287.5,1605.0,6
+AAS,410.25,60.5,1660.0,8
+Troponina,25.125,25.0,50.0,8
+Diagnostico IAM,20.0,8.0,105.0,8
+ECG,15.714285714285714,15.0,18.0,7
+Triagem,11.5,11.5,14.0,8
+Chegada,8.125,8.0,12.0,8

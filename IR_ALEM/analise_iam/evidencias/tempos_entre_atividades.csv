@@ -1,0 +1,13 @@
+concept:name,proxima_atividade,count,mean,median,max
+AAS,Alta,2,1461.0,1461.0,1660.0
+Reperfusao,Alta,6,1348.3333333333333,1287.5,1605.0
+Diagnostico IAM,Reperfusao,1,105.0,105.0,105.0
+AAS,Reperfusao,5,63.6,57.0,92.0
+AAS,Diagnostico IAM,1,42.0,42.0,42.0
+Troponina,Diagnostico IAM,7,27.571428571428573,25.0,50.0
+ECG,Troponina,7,15.714285714285714,15.0,18.0
+Triagem,Troponina,1,14.0,14.0,14.0
+Triagem,ECG,7,11.142857142857142,11.0,13.0
+Chegada,Triagem,8,8.125,8.0,12.0
+Troponina,AAS,1,8.0,8.0,8.0
+Diagnostico IAM,AAS,7,7.857142857142857,8.0,10.0
