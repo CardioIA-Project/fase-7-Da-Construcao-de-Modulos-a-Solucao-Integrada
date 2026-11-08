@@ -257,8 +257,6 @@ jupyter notebook notebooks\analise_iam.ipynb
 O relatório técnico está em:
 ```\docs\relatorio_tecnico_ir_alem.pdf```
 
-```
-
 ---
 
 ## ⚠️ Limitações
