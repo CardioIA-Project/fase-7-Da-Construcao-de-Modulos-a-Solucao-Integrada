@@ -244,8 +244,6 @@ O script cria:
 - `evidencias/fitness.csv`
 - `evidencias/performance_dfg.png`
 - `evidencias/performance_heuristic_net.png` (quando suportado pela versão)
-- `relatorio_tecnico.pdf`
-- `relatorio_tecnico.docx`
 
 
 Para abrir o notebook:
